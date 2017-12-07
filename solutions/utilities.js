@@ -9,9 +9,11 @@ let arr2D = "rows do not contain whitespace (\\s)";
 // remove beginning/trailing whitespace
 input = input.trim();
 
-// if input contains carraige return(s) and/or line feed(s) (\r\n) then it has "rows"
+// if input contains carriage return(s) and/or line feed(s) (\r\n) then it has "rows"
 if (/[\r\n]+/.test(input)) {
-    rows = input.split(/[\r\n]+/).map(i => i.trim()).map(i => isNaN(i) ? i : parseInt(i));
+    rows = input
+        .split(/[\r\n]+/)
+        .map(i => isNaN(i) ? i.trim() : parseInt(i));
 }
 console.log("rows:", rows);
 
