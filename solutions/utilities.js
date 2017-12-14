@@ -1,8 +1,18 @@
+const input = ``;
+const rows = input.split(/[\r\n]+/).map(i => isNaN(i) ? i.trim() : parseInt(i));
+for (row of rows) {
+    row.split(/[\s]+/).map(i => isNaN(i) ? i : parseInt(i));
+}
+
+
+
+
+
 // input may contain whitespace (\s), and/or carriage return or line feed (\r\n)
 // input may contain only digits, or digits and other
-let input = ` test secondWordFirstLine 1
-firstWordSecondLine    hellowWorld   2 3 4 5 `;
-let rows = "input does not contain rows (\\r\\n)";
+//let input = ` test secondWordFirstLine 1
+//firstWordSecondLine    hellowWorld   2 3 4 5 `;
+//let rows = "input does not contain rows (\\r\\n)";
 let arr = "input does not contain whitespace (\\s)";
 let arr2D = "rows do not contain whitespace (\\s)";
 
